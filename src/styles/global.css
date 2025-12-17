@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'VT323', monospace;
+  background: #01172F;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #791586;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.intro {
+  min-height: 100vh;
+  padding-top: 6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section {
+  padding: 6rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card {
+  background: #161b2e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.cta-button {
+  font-family: 'VT323', monospace;
+  background: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  color: black;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #080b14;
+}
