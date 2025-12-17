@@ -51,8 +51,10 @@ Verify installation:
 ```bash
 node -v
 npm -v
+```
 
-2️⃣ Clone the repository
+Clone the repository
 ```bash
 git clone https://github.com/hera-myat/wicys-cyber-marketplace.git
 cd wicys-cyber-marketplace
+
