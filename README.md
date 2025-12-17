@@ -1,4 +1,4 @@
-# 👾 WICYS CYBER MARKETPLACE 👾
+# WICYS CYBER MARKETPLACE
 
 A single-scroll, interactive React website built for **WiCyS UIC** during a winter break
 pair-programming series.
@@ -25,6 +25,7 @@ portfolio-quality frontend development using modern web tools.
 - **HTML/CSS/JavaScript**: Core web technologies used to structure, style, and add interactivity to the site.
 
 - **Figma**: A collaborative design tool used to create and share the UI/UX design before implementation.  
+- **Check Out Figma Design**[https://www.figma.com/design/1ayH7z2KZovduriKf2a7HN/WiCyS-Cyber-Marketplace?node-id=13-2&p=f&t=vyPbxcS7VDR1VbVc-0]
 
 - **GitHub**: Version control and collaboration platform used for managing branches, pull requests, and team workflows.
 
