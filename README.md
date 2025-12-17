@@ -8,7 +8,7 @@ portfolio-quality frontend development using modern web tools.
 
 ---
 
-## 🎯 PROJECT GOALS
+## 🎯 Project Goals
 - Build a fun, creative, visually engaging WiCyS-themed webpage
 - Practice collaborative React development
 - Create a portfolio-worthy project
@@ -16,7 +16,7 @@ portfolio-quality frontend development using modern web tools.
 
 ---
 
-## 🛠 TECH STACK
+## 🛠 Tech Stack
 
 - **React.js**: A component-based JavaScript library for building dynamic and reusable user interfaces, chosen for its flexibility and industry relevance.
 
@@ -30,14 +30,14 @@ portfolio-quality frontend development using modern web tools.
 
 ---
 
-## 👩‍💻 DEVELOPERS
+## 👩‍💻 Developers
 - **Khin Yuupar (Hera) Myat** — Project Lead (External Vice President, WiCyS UIC)
 - **Angela Camargo** — WebDev Committee (WiCyS UIC)
 - **Valeria Marquez Enriquez** — WebDev Committee (WiCyS UIC)
 
 ---
 
-## 🚀 GETTING STARTED (FOR COLLABORATORS)
+## 🚀 Getting Started (For Collaborators)
 
 ### 1️⃣ Install Node.js
 
