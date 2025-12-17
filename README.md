@@ -1,4 +1,4 @@
-# WICYS CYBER MARKETPLACE
+# 👾 WICYS CYBER MARKETPLACE 👾
 
 A single-scroll, interactive React website built for **WiCyS UIC** during a winter break
 pair-programming series.
