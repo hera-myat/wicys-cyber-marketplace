@@ -6,6 +6,8 @@ pair-programming series.
 This project focuses on a creative, user-friendly interface, smooth scrolling interactions, and
 portfolio-quality frontend development using modern web tools.
 
+This is a collaboration between WiCyS External VP and 2 WebDev Committee members.
+
 ---
 
 ## 🎯 Project Goals
