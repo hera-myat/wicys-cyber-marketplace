@@ -19,7 +19,7 @@ body {
   width: 100%;
   background: #791586;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem 2rem;
   z-index: 1000;
 }
@@ -27,18 +27,24 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 0;
   gap: 1.5rem;
 }
 
 .navbar a {
   color: white;
   text-decoration: none;
+  font-size: 1.6rem;
 }
 
 .intro {
   min-height: 100vh;
   padding-top: 6rem;
   text-align: center;
+  font-size: 1.6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,4 +78,11 @@ body {
   text-align: center;
   padding: 2rem;
   background: #080b14;
+}
+
+.introLogo {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  width: 180px;
+  height: auto;
 }
