@@ -51,7 +51,7 @@ body {
   min-height: 100vh;
   padding-top: 6rem;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,6 +68,43 @@ body {
   padding: 6rem 2rem;
   max-width: 900px;
   margin: auto;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;       /* bigger title */
+  letter-spacing: 0.08em;
+}
+
+.events-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.events-scroll {
+  display: flex;
+  /* justify-content: center; center row when not overflowing */
+  gap: 4rem;            /* MORE space between flyers */
+  overflow-x: auto;
+  padding: 2rem 1rem;   /* more breathing room top/bottom */
+  scroll-behavior: smooth;
+}
+
+.event-card {
+  min-width: 360px;
+  border: 2px solid #00ff7f;
+  padding: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.02);
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .card {
