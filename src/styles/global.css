@@ -50,6 +50,13 @@ body {
   justify-content: center;
 }
 
+.introLogo {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  width: 180px;
+  height: auto;
+}
+
 .section {
   padding: 6rem 2rem;
   max-width: 900px;
@@ -61,8 +68,6 @@ body {
   margin-bottom: 2rem;
   font-size: 2.5rem;
   letter-spacing: 0.08em;
-
-
 }
 
 .Scroll{
@@ -79,7 +84,6 @@ body {
 
 .Photos{
   min-width: 360px;
-  border: 2px solid #b1d34A;
   padding: 1.5rem;
   transition: transform 0.2s ease;
 }
@@ -87,10 +91,36 @@ body {
 .Photos:hover{
   transform: scale(1.02);
 }
+
 .Photos img{
   width: 100%;
+  border: 10px solid #b1d34A;
+  border-radius: 25px;
   height: auto;
   object-fit: contain;
+  
+}
+
+.upcomingPhoto{
+  width: 100%;
+  border: 10px solid #b1d34A;
+  border-radius: 25px;
+  height: auto;
+  object-fit: contain;
+  filter: blur(3px);
+}
+
+.Photos h1{
+  font-size: xx-large;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+
+}
+
+.caption{
+  text-align: center;
 }
 
 .card {
@@ -115,11 +145,4 @@ body {
   text-align: center;
   padding: 2rem;
   background: #080b14;
-}
-
-.introLogo {
-  display: block;
-  margin: 1.5rem auto 0 auto;
-  width: 180px;
-  height: auto;
 }

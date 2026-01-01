@@ -10,16 +10,27 @@ export default function Events() {
         
           <div className = "Photos">
             <img src={eventOne} />
+            <h1> Jan 3rd </h1>
           </div>
 
           <div className = "Photos"> 
             <img src={eventTwo} />
+            <h1> Feb 4th </h1>
           </div>
 
           <div className = "Photos">
-            <img src = {eventThree} />
+            <img src = {eventThree} className= 'upcomingPhoto'/>
+            <h1> Coming Soon </h1>
+            <h1> ... </h1>
           </div>
-        </div>
+
+      </div>
+
+      <div className='caption'>
+        <h1> SUPPORT WICYS FUNDRAISERS BY MENTIONING WICYS AT CHECKOUT! </h1>
+        <h1> NO EXTRA PAY </h1>
+      </div>
+      
         
     </Section>
   )
