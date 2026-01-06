@@ -94,16 +94,16 @@ body {
 
 .Photos img{
   width: 100%;
-  border: 10px solid #b1d34A;
+  border: 10px solid #01172F;
+  outline: 10px solid #b1d34A;
   border-radius: 25px;
   height: auto;
   object-fit: contain;
-  
 }
 
 .upcomingPhoto{
   width: 100%;
-  border: 10px solid #b1d34A;
+  outline: 10px solid #b1d34A;
   border-radius: 25px;
   height: auto;
   object-fit: contain;
@@ -118,6 +118,117 @@ body {
   letter-spacing: 0.05em;
 
 }
+
+/*MARKETPLACE SECTION*/
+
+@keyframes textLoop {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+}
+
+.scrollTitle{
+  width: 100%;
+  overflow: hidden;
+}
+
+.scrollTitle h1{
+  white-space: nowrap;
+  animation: textLoop 25s linear infinite;
+
+  justify-content: center;
+  padding: .5rem 2rem;
+}
+
+.firstRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  min-width: 360px;
+  padding: .25rem;
+}
+
+.secondRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.merch{
+  padding: 5%;
+}
+
+.merch img{
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid #791586;
+  border-radius: 25px;
+}
+
+.merch h1{
+  text-align: center;
+  letter-spacing: 0.05em;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 10px solid #791586;
+  border: 10px solid #01172F;
+  border-radius: 25px;
+}
+
+.merch h2{
+  font-size: medium;
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+}
+
+/*DONATION SECTION*/
+.donation{
+  justify-content: center;
+  align-items: center;
+  outline: 8px solid #791586;
+  border: 75px solid #01172F;
+  border-radius: 25px;
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donation h1{
+  text-align: center;
+  font-weight: lighter;
+}
+
+.donateButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+
+  margin-left: auto;
+  margin-right: auto;
+  
+  font-size: larger;
+  font-family: 'VT323', monospace;
+  text-align: center;
+  background: #b1d34A;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
 
 .caption{
   text-align: center;
