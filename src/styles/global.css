@@ -12,6 +12,7 @@ body {
   letter-spacing: 0.5px;
 }
 
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -30,10 +31,8 @@ body {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
   width: 100%;
   padding: 0;
-  /* margin: 0; */
 }
 
 .navbar li {
@@ -47,6 +46,7 @@ body {
   text-decoration: none;
 }
 
+/* INTRO */
 .intro {
   min-height: 100vh;
   padding-top: 6rem;
@@ -61,9 +61,9 @@ body {
   display: block;
   margin: 1.5rem auto 0 auto;
   width: 180px;
-  height: auto;
 }
 
+/* SECTION */
 .section {
   padding: 6rem 2rem;
   max-width: 900px;
@@ -73,60 +73,143 @@ body {
 section h2 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2.5rem;       /* bigger title */
+  font-size: 2.5rem;
   letter-spacing: 0.08em;
+}
+
+/* EVENTS */
+.events-scroll {
+  display: flex;
+  gap: 4rem;
+  overflow-x: auto;
+  padding: 2rem 1rem;
+  scroll-behavior: smooth;
 }
 
 .events-scroll::-webkit-scrollbar {
   height: 6px;
 }
 
-.events-scroll {
-  display: flex;
-  /* justify-content: center; center row when not overflowing */
-  gap: 4rem;            /* MORE space between flyers */
-  overflow-x: auto;
-  padding: 2rem 1rem;   /* more breathing room top/bottom */
-  scroll-behavior: smooth;
-}
-
 .event-card {
   min-width: 360px;
   border: 2px solid #00ff7f;
+  border-radius: 22px;
   padding: 1.5rem;
-  transition: transform 0.2s ease;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .event-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(0, 255, 127, 0.6);
 }
 
 .event-card img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  border-radius: 16px;
 }
 
-.card {
-  background: #161b2e;
-  padding: 1.5rem;
-  border-radius: 12px;
+/* EVENT DATE */
+.event-date {
   margin-top: 1rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
 }
 
-.cta-button {
-  font-family: 'VT323', monospace;
-  background: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
-  color: black;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
+/* SCROLL DOTS */
+.scroll-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
 }
 
-.footer {
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.dot.active {
+  background: #00ff7f;
+}
+
+/* SUPPORT TEXT */
+.support-text {
   text-align: center;
-  padding: 2rem;
-  background: #080b14;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  opacity: 0.85;
+}
+
+/* MARKETPLACE (unchanged but kept for completeness) */
+.marketplace-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.marketplace-card {
+  border: 2px solid #791586;
+  border-radius: 22px;
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marketplace-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 20px rgba(121, 21, 134, 0.6);
+}
+
+.marketplace-card img {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+
+.marketplace-card p {
+  font-size: 1.6rem;
+}
+
+.marketplace-card.locked {
+  border-style: dashed;
+}
+
+/* TICKER */
+.ticker {
+  overflow: hidden;
+  width: 100%;
+  border-top: 2px solid #791586;
+  border-bottom: 2px solid #791586;
+  margin-bottom: 3rem;
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 18s linear infinite;
+}
+
+.ticker-track span {
+  font-size: 2rem;
+  white-space: nowrap;
+  padding-right: 3rem;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
