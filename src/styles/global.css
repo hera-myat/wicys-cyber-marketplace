@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,7 +15,6 @@ body {
   color: white;
   letter-spacing: 0.5px;
 }
-
 
 .navbar {
   position: fixed;
@@ -38,6 +41,39 @@ body {
   color: white;
   text-decoration: none;
   font-size: 1.6rem;
+  display: inline-block;
+
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  position: relative;
+}
+
+.navbar a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: .5;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.navbar a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
+	}
 }
 
 .intro {
@@ -50,160 +86,227 @@ body {
   justify-content: center;
 }
 
+.intro h1{
+  text-align: right;
+  overflow: hidden;
+  border-right: .3rem solid rgb(255, 255, 255); 
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .2em;
+  animation: typewriter 8s steps(30, end) infinite,
+    blink .5s step-end infinite;;
+}
+
+@keyframes typewriter {
+  0% { width: 0; }
+  40% { width: 35ch;}
+  60% { width: 35ch;}
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255) }
+}
+
 .introLogo {
   display: block;
   margin: 1.5rem auto 0 auto;
   width: 180px;
-  height: auto;
+  transition: filter 0.3s ease-in;
 }
 
+.introLogo:hover{
+  filter: drop-shadow(0px 0px 3px #791586);
+  transform: scale(1.05);
+}
+
+
+/*EVENTS*/
 .section {
   padding: 6rem 2rem;
   max-width: 900px;
   margin: auto;
 }
 
-.section h2{
+.caption h1 {
   text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.08em;
+  text-shadow: 0px 0px 25px rgb(114, 113, 113); 
+}
+.caption h1:hover {
+  text-shadow: 0px 0px 35px rgb(146, 144, 144); 
+}
+
+.section h2 {
+  padding-bottom: 10%;
+  text-align: center;
+  margin-top: 5rem;
   margin-bottom: 2rem;
   font-size: 2.5rem;
   letter-spacing: 0.08em;
 }
 
-.Scroll{
+.Scroll {
   display: flex;
-  gap:  4rem;
+  gap: 5rem;
   overflow-x: auto;
-  padding: 2rem 1rem;
   scroll-behavior: smooth;
+  padding: 2rem 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-.Scroll::webkit-scroller{
-  height: 6px;
+.Scroll::-webkit-scrollbar {
+  display: none;
 }
 
-.Photos{
+.Photos {
   min-width: 360px;
-  padding: 1.5rem;
-  transition: transform 0.2s ease;
+  padding: 2.5rem;
+  transition: transform 0.3s ease;
 }
 
-.Photos:hover{
+.Photos img {
+  width: 100%;
+  border: 15px solid #01172F;
+  outline: .2px solid #b1d34A;
+  box-shadow: 0px 0px 20px #b1d34A;
+  border-radius: 25px;
+}
+
+.Photos img:hover {
   transform: scale(1.02);
+  box-shadow: 0px 0px 15px #b1d34A;
 }
 
-.Photos img{
-  width: 100%;
-  border: 10px solid #01172F;
-  outline: 10px solid #b1d34A;
-  border-radius: 25px;
-  height: auto;
-  object-fit: contain;
-}
-
-.upcomingPhoto{
+.upcomingPhoto {
   width: 100%;
   outline: 10px solid #b1d34A;
   border-radius: 25px;
-  height: auto;
-  object-fit: contain;
-  filter: blur(3px);
+  filter: blur(2.5px);
 }
 
-.Photos h1{
-  font-size: xx-large;
+.Photos h1 {
   text-align: center;
-  margin-bottom: 1rem;
   font-size: 2.5rem;
   letter-spacing: 0.05em;
-
 }
+
+.scrollDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.dot,
+.dotActive {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  background: #b1d34A;
+  transform: scale(1.5);
+}
+
 
 /*MARKETPLACE SECTION*/
-
 @keyframes textLoop {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-.scrollTitle{
+.scrollTitle {
   width: 100%;
   overflow: hidden;
+  border-top: 3px solid #791586;
+  border-bottom: 3px solid #791586;
 }
 
-.scrollTitle h1{
+.scrollTitle h1 {
   white-space: nowrap;
   animation: textLoop 25s linear infinite;
+  padding: 0.5rem 2rem
+}
 
+.firstRow,
+.secondRow {
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  gap: 2rem;
   justify-content: center;
-  padding: .5rem 2rem;
+  margin-top: 2rem;
 }
 
-.firstRow{
+.merch {
+  width: 320px;
+  height: 420px;
+  padding: 1rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  min-width: 360px;
-  padding: .25rem;
-}
-
-.secondRow{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.merch{
-  padding: 5%;
-}
-
-.merch img{
-  width: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border: 10px solid #791586;
-  border-radius: 25px;
-}
-
-.merch h1{
-  text-align: center;
-  letter-spacing: 0.05em;
-  width: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  outline: 10px solid #791586;
-  border: 10px solid #01172F;
-  border-radius: 25px;
-}
-
-.merch h2{
-  font-size: medium;
-  text-align: center;
-  font-weight: 800;
-  font-size: 2.5rem;
-  letter-spacing: 0.05em;
-}
-
-/*DONATION SECTION*/
-.donation{
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  outline: 8px solid #791586;
-  border: 75px solid #01172F;
+  justify-content: space-between;
+}
+
+.merch img,
+.merch h1 {
+  box-sizing:border-box;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid #01172F;
+  border: 3px solid #791586;
+  box-shadow: 0px 0px 15px #791586;
+  border-radius: 25px;
+  margin: 0;
+}
+
+.merch img {
+  object-fit: cover;
+}
+
+.merch h1 {
+  text-align: center;
+  padding: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.merch h1:hover,
+.merch img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px #791586;
+}
+
+.merch h2 {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+}
+
+.donation {
+  outline: 3px solid #791586;
+  border: 80px solid #01172F;
+  box-shadow: 0px 0px 15px #791586;
   border-radius: 25px;
   width: 80%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
-.donation h1{
+.donation h1 {
   text-align: center;
   font-weight: lighter;
 }
@@ -214,24 +317,23 @@ body {
   align-items: center;
   width: 150px;
   height: 50px;
-
-  margin-left: auto;
-  margin-right: auto;
-  
-  font-size: larger;
+  margin: auto;
   font-family: 'VT323', monospace;
-  text-align: center;
+  font-size: larger;
   background: #b1d34A;
-  padding: 0.75rem 1.5rem;
   border-radius: 999px;
   color: black;
   border: none;
   cursor: pointer;
 }
 
+.donateButton:hover{
+  box-shadow: 0px 0px 25px #b2d056;
+}
 
-.caption{
+.caption {
   text-align: center;
+  font-size: x-large;
 }
 
 .card {
@@ -243,7 +345,7 @@ body {
 
 .cta-button {
   font-family: 'VT323', monospace;
-  background: #ffffff;
+  background: white;
   padding: 0.75rem 1.5rem;
   border-radius: 999px;
   color: black;

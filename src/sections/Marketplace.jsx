@@ -5,12 +5,11 @@ import merchThree from '../graphics/wicys-merch-3.png'
 
 export default function Marketplace() {
   return (
-    <Section id="marketplace" title="WiCyS Marketplace">
+    <Section id="marketplace">
       <div className="Marketplace">
 
         <div className='scrollTitle'>
            <h1>BECOME A WICYS MEMBER TODAY TO RECIVE MERCH
-            ▪ BECOME A WICYS MEMBER TODAY TO RECIVE MERCH
             ▪ BECOME A WICYS MEMBER TODAY TO RECIVE MERCH
             ▪ BECOME A WICYS MEMBER TODAY TO RECIVE MERCH
             ▪ BECOME A WICYS MEMBER TODAY TO RECIVE MERCH
@@ -37,7 +36,7 @@ export default function Marketplace() {
 
           <div className='merch'>
             <h1> UNLOCK EXCLUSIVE REWARDS BY JOINING WICYS TODAY </h1>
-            <h2> WICYS TOTE $10 </h2>
+            <h2> MEMBER EXCLUSIVE </h2>
           </div>
         </div>
         
