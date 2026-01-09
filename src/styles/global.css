@@ -312,6 +312,7 @@ body {
 }
 
 .donateButton {
+  text-decoration: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,10 +326,13 @@ body {
   color: black;
   border: none;
   cursor: pointer;
+  
 }
 
 .donateButton:hover{
   box-shadow: 0px 0px 25px #b2d056;
+  color:#791586;
+  text-decoration: underline;
 }
 
 .caption {
