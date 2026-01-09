@@ -1,47 +1,47 @@
 import Section from '../components/Section'
-import merch1 from '../graphics/wicys-merch-1.png'
-import merch2 from '../graphics/wicys-merch-2.png'
-import merch3 from '../graphics/wicys-merch-3.png'
+import merchOne from '../graphics/wicys-merch-1.png'
+import merchTwo from '../graphics/wicys-merch-2.png'
+import merchThree from '../graphics/wicys-merch-3.png'
 
 export default function Marketplace() {
   return (
     <Section id="marketplace">
+      <div className="Marketplace">
 
-      {/* TICKER */}
-      <div className="ticker">
-        <div className="ticker-track">
-          <span>
-            BECOME A WICYS MEMBER TODAY TO RECEIVE A FREE RANDOM MERCH
-          </span>
-          <span>
-            BECOME A WICYS MEMBER TODAY TO RECEIVE A FREE RANDOM MERCH
-          </span>
+        <div className='scrollTitle'>
+           <h1>BECOME A WICYS MEMBER TODAY TO RECIVE MERCH
+            ▪ BECOME A WICYS MEMBER TODAY TO RECIVE MERCH
+            ▪ BECOME A WICYS MEMBER TODAY TO RECIVE MERCH
+            ▪ BECOME A WICYS MEMBER TODAY TO RECIVE MERCH
+           </h1>
         </div>
+
+        <div className='firstRow'>
+          <div className='merch'>
+            <img src={merchOne} />
+            <h2> WICYS SWEATER $20 </h2>
+          </div>
+
+          <div className='merch'>
+            <img src={merchTwo} />
+            <h2> WICYS TOTE $10 </h2>
+          </div>
+        </div>
+
+        <div className='secondRow'>
+          <div className='merch'>
+            <img src={merchThree} />
+            <h2> WICYS SWEATER $20 </h2>
+          </div>
+
+          <div className='merch'>
+            <h1> UNLOCK EXCLUSIVE REWARDS BY JOINING WICYS TODAY </h1>
+            <h2> MEMBER EXCLUSIVE </h2>
+          </div>
+        </div>
+        
+
       </div>
-
-      <div className="marketplace-grid">
-        <div className="marketplace-card">
-          <img src={merch1} alt="WiCyS Sweater" />
-          <p>WICYS SWEATER — $20</p>
-        </div>
-
-        <div className="marketplace-card">
-          <img src={merch2} alt="WiCyS Tote" />
-          <p>WICYS TOTE — $10</p>
-        </div>
-
-        <div className="marketplace-card">
-          <img src={merch3} alt="WiCyS Note" />
-          <p>WICYS NOTE — $5</p>
-        </div>
-
-        <div className="marketplace-card locked">
-          <p className="locked-text">
-            UNLOCK EXCLUSIVE REWARDS BY JOINING WICYS TODAY
-          </p>
-        </div>
-      </div>
-
     </Section>
   )
 }
