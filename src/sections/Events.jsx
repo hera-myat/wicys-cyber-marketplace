@@ -8,16 +8,44 @@ export default function Events() {
   return (
     <Section id="events" title=" WICYS FUNDRAISING EVENTS">
       <div className="Scroll">
-        <div className="Photos">
-          <img src={coldstone} alt="Coldstone"/>
+        <div className="PO">
+          <div className="Photos">
+            <img src={coldstone} alt="Coldstone"/>
+          </div>
+              <p className="dates">
+                JAN 3RD
+              </p>
+            </div>
+       
+        <div className="PO">
+          <div className="Photos">
+            <img src={Rasoi} alt="Rasoi"/>
+          </div>
+              <p className="dates">
+                FEB 4TH
+              </p>
         </div>
-        <div className="Photos">
-          <img src={Rasoi} alt="Rasoi"/>
+
+
+        <div className="PO">
+         <div className="Photos">
+            <img src={Gathers} alt="Gathers"/>
+          </div>
+              <p className="dates">
+              COMING SOON
+              </p>
         </div>
-        <div className="Photos">
-          <img src={Gathers} alt="Gathers"/>
-        </div>
+      </div>
+
+      <div className="Caption">
+      <h1> 
+        SUPPORT WICYS FUNDRAISING BY MENTIONING WICYS AT CHECKOUT
+      </h1>
+      <h2>
+      NO EXTRA PAY
+      </h2>
       </div>
     </Section>
   )
+  
 }

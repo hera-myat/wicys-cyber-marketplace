@@ -78,7 +78,6 @@ body {
 }
 .Scroll::-webkit-scrollbar{
   height: 6px;
-
 }
 .Scroll{
   display: flex;
@@ -87,9 +86,19 @@ body {
   padding: 2rem 1rem;
   scroll-behavior: smooth;
 }
+.Photos:hover{
+  transform: scale(1.02);
+}
+.Photos img{
+  width:100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .Photos{
   min-width: 360px;
-  border: 2px solid #B1D34A;
+  border: 10px solid #B1D34A;
+  border-radius: 50px;
   padding: 1.5rem;
   transition: transform 0.2s ease;
 }
@@ -124,4 +133,138 @@ body {
   text-align: center;
   padding: 2rem;
   background: #080b14;
+}
+
+.Caption h1{
+  text-align: center;
+  font-size:clamp(10px, 4vw, 30px);
+  margin-bottom: 0.5rem;
+}
+.Caption h2{
+  text-align:center;
+  font-size:clamp(10px, 4vw, 30px);
+}
+.PO{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.dates {
+  font-size:35px;
+  font-weight:normal;
+  text-align: center;
+  margin:1rem 0 0 0;
+}
+.scrolling-headline {
+  background: #01172F;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 1rem 0;
+  border-bottom: 2px solid #791586;
+}
+
+.headline-content {
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.merch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+
+@media (max-width: 768px) {
+  .merch-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+}
+
+
+.merch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.merch-box {
+  border: 3px solid #791586;
+  border-radius: 30px;
+  padding: 2rem;
+  background: #0a1929;
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.merch-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.member-exclusive {
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 3rem 1.5rem;
+}
+
+.merch-label {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.donation-box {
+  border: 3px solid #791586;
+  border-radius: 30px;
+  background: #0a1929;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.donation-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.donation-signature {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.donate-button {
+  background: #B1D34A;
+  color: #01172F;
+  font-family: 'VT323', monospace;
+  font-size: 1.5rem;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.donate-button:hover {
+  background: #9ab83a;
+  transform: scale(1.05);
+  transition: all 0.2s ease;
 }
